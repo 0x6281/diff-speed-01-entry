@@ -1,5 +1,9 @@
 # diff-speed-01-entry
 
+[![make.fun · diff-speed-01-run-20261126](https://make.fun/badge/diff-speed-01-run-20261126.svg)](https://make.fun/bounty/diff-speed-01-run-20261126?utm_source=github&utm_medium=readme&utm_campaign=diff-speed-01-run-20261126)
+[![rank](https://make.fun/badge/diff-speed-01-run-20261126/0x6281/diff-speed-01-entry/rank.svg)](https://make.fun/bounty/diff-speed-01-run-20261126/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=diff-speed-01-run-20261126)
+[![reward](https://make.fun/badge/diff-speed-01-run-20261126/0x6281/diff-speed-01-entry/reward.svg)](https://make.fun/bounty/diff-speed-01-run-20261126?utm_source=github&utm_medium=readme&utm_campaign=diff-speed-01-run-20261126)
+
 A fast drop-in for makefun-diff 1.0.0: `solve.js` returns, for every `{ old, new }`,
 exactly the patch makefun-diff 1.0.0 returns, as one string — and does it much faster.
 
