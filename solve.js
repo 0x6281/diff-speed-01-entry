@@ -108,8 +108,9 @@ function editRuns(a, b) {
     let found = false;
     for (let k = -d; k <= d; k += 2) {
       // V[d-1][k-1] sits at vPrev[k + d - 2]; V[d-1][k+1] at vPrev[k + d].
-      const vDown = (k - 1 >= -dm1 && k - 1 <= dm1) ? vPrev[k + d - 2] : -1;
-      const vUp = (k + 1 >= -dm1 && k + 1 <= dm1) ? vPrev[k + d] : -1;
+      // (k-1 <= d-1 and k+1 >= -(d-1) always hold, since -d <= k <= d.)
+      const vDown = (k - 1 >= -dm1) ? vPrev[k + d - 2] : -1;
+      const vUp = (k + 1 <= dm1) ? vPrev[k + d] : -1;
       // A deletion is possible while an old line is left; an insertion while a new one is.
       const canRemove = vDown !== -1 && vDown < n;
       const canAdd = vUp !== -1 && (vUp - 1 - k) < m;

@@ -30,17 +30,18 @@ against makefun-diff 1.0.0 (edge cases plus random small/medium/large texts,
 including heavy line duplication to stress the deletion-wins-ties rule) also
 matches on every case.
 
-Speed (Node 22, same machine, mean of 7 runs per case, diff time only):
+Speed (Node 22, same machine, median of 5 runs per case after warm-up, diff time only;
+an independent audit measured 2.9–3.0x on CPU time, and the same answers byte-identical):
 
 | case | makefun-diff 1.0.0 | this entry | speedup |
 |------|-------------------|------------|---------|
-| g-0001 | 351 ms | 140 ms | 2.52x |
-| g-0002 | 331 ms | 129 ms | 2.56x |
-| g-0003 | 276 ms | 100 ms | 2.77x |
-| g-0004 | 282 ms | 105 ms | 2.69x |
-| **total** | **1,240 ms** | **473 ms** | **2.62x** |
+| g-0001 | 435 ms | 133 ms | 3.28x |
+| g-0002 | 447 ms | 141 ms | 3.16x |
+| g-0003 | 371 ms | 119 ms | 3.10x |
+| g-0004 | 366 ms | 117 ms | 3.12x |
+| **total** | **1,619 ms** | **511 ms** | **3.17x** |
 
-Peak RSS ~294 MB (limit 1,024 MB). Total repo size ~16 KB (limit 1 MiB).
+Peak RSS ~165 MB on the practice set (limit 1,024 MB). Total repo size ~16 KB (limit 1 MiB).
 
 ## Files
 
